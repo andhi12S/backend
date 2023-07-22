@@ -5,6 +5,7 @@ const app = express();
 
 try{
     await db.authenticate();
+    await db.sync();
     console.log('Database connected...');
 } catch (error){
     console.error(error);
