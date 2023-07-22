@@ -16,7 +16,7 @@ export const getUsers = async (req, res) => {
 }
 
 
-export const createUsers = async (req,res)=>{
+export const createUser = async (req,res)=>{
     try{
         const { name,password, email} = req.body
         const userDataCreated = await Users.create({
@@ -40,7 +40,7 @@ export const createUsers = async (req,res)=>{
     }
 }
 
-export const deleteUsers = async (req,res)=>{
+export const deleteUser = async (req,res)=>{
     try{
         const idUser = req.params.id
         const checkUser = await Users.findOne({
@@ -70,7 +70,7 @@ export const deleteUsers = async (req,res)=>{
     }
 }
 
-export const updateUsers = async (req,res)=>{
+export const updateUser = async (req,res)=>{
     try {
         const { name,email, password} = req.body
         const idUser = req.params.id
