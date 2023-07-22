@@ -1,17 +1,20 @@
 import Users from "../models/UserModel.js";
 
- export const getUsers = async(req, res) =>{
+
+
+export const getUsers = async (req, res) => {
     try {
         const users = await Users.findAll();
         res.status(200).json({
             status: 200,
-            message:"succes",
+            message: "succes",
             data: users
         });
-    } catch (error){
+    } catch (error) {
         console.log(error);
     }
 }
+
 
 export const createUsers = async (req,res)=>{
     try{
@@ -36,6 +39,7 @@ export const createUsers = async (req,res)=>{
         })
     }
 }
+
 export const deleteUsers = async (req,res)=>{
     try{
         const idUser = req.params.id
