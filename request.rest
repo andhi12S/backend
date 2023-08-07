@@ -1,14 +1,14 @@
 GET http://localhost:5000/users  
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI0LCJuYW1lIjoiYWRpIiwiZW1haWwiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE2OTAzNDI3NjgsImV4cCI6MTY5MDM0Mjc4OH0.Ie9sAjlX3HJ9lgaN61gZt3KCQUI6cjk9cxcWvD2VElw
+Authorization: Bearer 
 ###
 POST  http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "adi",
-    "email": "email@gmail.com",
-    "password": "19809",
-    "confPassword":"19809"
+    "name": "andi",
+    "email": "andhika@gmail.com",
+    "password": "1234",
+    "confPassword":"1234"
 }
 
 ###
@@ -16,14 +16,16 @@ POST  http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email": "email@gmail.com",
-    "password": "19809"
+    "email": "andhikavernando767@gmail.com",
+    "password": "123"
 }
 
 ###
 GET http://localhost:5000/token
-###
-POST  http://localhost:5000/users
 
 ###
 DELETE  http://localhost:5000/logout
+
+###
+POST  http://localhost:5000/users
+
